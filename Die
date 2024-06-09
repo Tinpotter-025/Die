@@ -1,0 +1,8 @@
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+ local humanoid = if player.Character then player.Character:FindFirstChild("Humanoid") else nil
+ if humanoid then
+  humanoid:TakeDamage(10000000000000000000)
+ end
+end)
